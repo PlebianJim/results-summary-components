@@ -10,6 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <script src="main.js" defer></script>
   <title>Results Summary - Component</title>
 </head>
 
@@ -20,7 +21,7 @@
 
       <p class="container-left-p1">Your Result</p>
       <div class="container-left-result">
-        <p class="container-left-p2">76</p>
+        <p class="container-left-p2" id="result-score"></p>
         <p class="container-left-p3"> of 100</p>
       </div>
       <p class="container-left-p4">Great</p>
@@ -30,55 +31,60 @@
     <section class="container-right">
 
       <p class="container-right-p1">Summary</p>
-      <div class="results-summary-container">
+
+      <div class="results-summary-container results-background-red">
         <div class="left-group">
           <img src="assets/images/icon-reaction.svg" alt="reaction icon">
-          <span>Reaction</span>
+          <span class="results-text-red">Reaction</span>
         </div>
         <div class="right-group">
-          <span>80 /</span>
-          <span> 100</span>
+          <span class="results-value" id="reaction-score"></span>
+          <span class="percentile-text">/ 100</span>
         </div>
       </div>
-      <div class="results-summary-container">
+
+      <div class="results-summary-container results-background-yellow">
         <div class="left-group">
           <img src="assets/images/icon-memory.svg" alt="memory icon">
-          <span>Memory</span>
+          <span class="results-text-yellow">Memory</span>
         </div>
         <div class="right-group">
-          <span>92 /</span>
-          <span> 100</span>
+          <span class="results-value" id="memory-score"></span>
+          <span class="percentile-text">/ 100</span>
         </div>
       </div>
-      <div class="results-summary-container">
+
+      <div class="results-summary-container results-background-green">
         <div class="left-group">
           <img src="assets/images/icon-verbal.svg" alt="verbal icon">
-          <span>Verbal</span>
+          <span class="results-text-green">Verbal</span>
         </div>
         <div class="right-group">
-          <span>61 /</span>
-          <span> 100</span>
+          <span class="results-value" id="verbal-score"></span>
+          <span class="percentile-text">/ 100</span>
         </div>
       </div>
-      <div class="results-summary-container">
+
+      <div class="results-summary-container results-background-blue">
         <div class="left-group">
           <img src="assets/images/icon-visual.svg" alt="visual icon">
-          <span>Visual</span>
+          <span class="results-text-blue">Visual</span>
         </div>
         <div class="right-group">
-          <span>72 /</span>
-          <span> 100</span>
+          <span class="results-value" id="visual-score"></span>
+          <span class="percentile-text">/ 100</span>
         </div>
       </div>
-      <button>Continue</button>
+
+      <button class="continue-button">Continue</button>
     </section>
 
   </div>
 
-  <!-- <div class="attribution">
+  <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/PlebianJim">Plebian Jim</a>.
-  </div> -->
+  </div>
 </body>
 
 </html>

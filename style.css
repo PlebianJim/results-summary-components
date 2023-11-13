@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
+    caret-color: transparent;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
 }
 
 /***** Main Container *****/
@@ -21,8 +23,8 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: calc(70% - 5%);
-    width: calc(50% - 5%);
+    height: calc(70vh - 5%);
+    width: calc(50vw - 5%);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     box-shadow: 2px 5px 10px grey;
@@ -110,14 +112,7 @@ body {
 .container-right-p1 {
     font-weight: 800;
     align-self: flex-start;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    width: calc(35vw - 1%);
+    font-size: calc(0.5rem + 1vw);
 }
 
 .results-summary-container {
@@ -129,6 +124,60 @@ body {
 
 .results-summary-container img {
     padding-right: 5%;
+}
+
+.results-background-red {
+    background-color: hsl(0, 100%, 95%);
+    padding: 5%;
+    border-radius: 10px;
+    
+}
+
+.results-text-red {
+    color: hsl(0, 100%, 67%);
+    font-weight: 700;
+    font-size: calc(0.2rem + 1vw);
+}
+
+.results-background-yellow {
+    background-color: hsl(39, 100%, 95%);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.results-text-yellow {
+    color: hsl(39, 100%, 56%);
+    font-weight: 700;
+    font-size: calc(0.2rem + 1vw);
+}
+
+.results-background-green {
+    background-color: hsl(166, 100%, 95%);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.results-text-green {
+    color: hsl(166, 100%, 37%);
+    font-weight: 700;
+    font-size: calc(0.2rem + 1vw);
+}
+
+.results-background-blue {
+    background-color: hsl(234, 85%, 95%);
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.results-text-blue {
+    color: hsl(234, 85%, 45%);
+    font-weight: 700;
+    font-size: calc(0.2rem + 1vw);
+}
+
+.percentile-text {
+    color: grey;
+    font-size: calc(0.25rem + 0.75vw);
 }
 
 .left-group {
@@ -143,4 +192,50 @@ body {
     width: 50%;
     padding-right: 5%;
     justify-content: flex-end;
+}
+
+.results-value {
+    font-weight: 800;
+    font-size: calc(0.25rem + 0.75vw);
+}
+
+.continue-button {
+    width: 100%;
+    border-radius: 25px;
+    padding: 5%;
+    font-size: calc(0.25rem + 0.75vw);
+    font-weight: 700;
+    color: white;
+    background-color: hsl(224, 30%, 27%);
+    border: none;
+    cursor: pointer;
+}
+
+.continue-button:hover {
+    background-color: white;
+    color: hsl(224, 30%, 27%);
+    border: 1px solid hsl(224, 30%, 27%);
+}
+
+.attribution {
+    margin-top: 5%;
+}
+
+@media (max-width: 700px) {
+
+    .container-main {
+        width: 80%;
+    }
+
+    .container-left-p2 {
+        font-size: calc(1.5rem + 0.5vw);
+    }
+
+    .container-left-p4 {
+        font-size: calc(1.5rem + 0.5vw);
+    }
+
+    .container-left-p5 {
+        width: 80%;
+    }
 }
